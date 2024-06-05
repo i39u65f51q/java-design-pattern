@@ -7,7 +7,8 @@ public class BuildingFactory {
     public BuildingFactory(){}
 
     public Building getNormalBuilding(Resource resource){
-        if(resource.wood >= 100){
+        if(resource.getWood() >= 100){
+            resource.setWood(resource.getWood() - 100);
             return new NormalBuilding();
         }
         System.out.println("Resource is not enough for NormalBuilding!");
@@ -15,9 +16,9 @@ public class BuildingFactory {
     }
 
     public Building getStrongBuilding(Resource resource){
-        if(resource.wood >= 250 && resource.gold >= 50){
-            resource.wood -= 250;
-            resource.gold -= 50;
+        if(resource.getWood() >= 250 && resource.getGold() >= 50){
+            resource.setWood(resource.getWood() - 250);
+            resource.setGold(resource.getGold() - 50);
             return new StrongBuilding();
         }
         System.out.println("Resource is not enough for StrongBuilding!");

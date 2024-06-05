@@ -1,4 +1,3 @@
-import army.Army;
 import building.BuildingFactory;
 import fight.Fight;
 import player.ElfPlayer;
@@ -7,23 +6,21 @@ import player.Player;
 import resource.ResourceBuilder;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         System.out.println("Hello, Fight!");
 
-        Fight fight = new Fight();
-        Player p1 = new HumanPlayer();//人族玩家
-        Player p2 = new ElfPlayer();//精靈玩家
+        Fight fight = new Fight(new BuildingFactory(), new ResourceBuilder());
 
-        p1.initArmy(new Army());
-        p2.initArmy(new Army());
-        p1.initResource(new ResourceBuilder()); 
-        p2.initResource(new ResourceBuilder());
-        p1.initBuilding(new BuildingFactory());
-        p2.initBuilding(new BuildingFactory());
+        Player p1 = new HumanPlayer();
+        Player p2 = new ElfPlayer();
 
         fight.register(p1);
         fight.register(p2); 
 
+        System.out.println("p1 round:");
         p1.attack(); //p1發動攻擊
+
+        System.out.println("p2 round:");
+        p2.attack();
     }
 }

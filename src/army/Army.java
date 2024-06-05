@@ -4,8 +4,8 @@ package army;
 public class Army {
     public State state; 
 
-    public Army(){
-        this.state = new Defend(); //預設防守狀態
+    public Army(State state){
+        this.state = state;
     }
 
     public void attack(){

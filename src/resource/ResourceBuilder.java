@@ -9,11 +9,11 @@ public class ResourceBuilder {
     }
 
     public void addWood(int count){
-        this.resource.wood += count;
+        this.resource.setWood(this.resource.getWood() + count);
     }
 
     public void addGold(int count){
-        this.resource.gold += count;
+        this.resource.setGold(this.resource.getGold() + count);
     }
 
     public void reset(){
@@ -21,7 +21,9 @@ public class ResourceBuilder {
     }
 
     public Resource getResource(){
-        return this.resource;
+        Resource temp = this.resource;
+        this.reset();
+        return temp;
     }
 
 }
