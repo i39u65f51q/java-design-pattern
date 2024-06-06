@@ -1,18 +1,41 @@
-## Getting Started
+## 遊戲情境
+　　在MOBA遊戲當中，玩家可選擇不同族群（精靈、人族、矮人）進行戰鬥配對。進入戰鬥當中，玩家會獲得資源與軍隊，玩家可透過資源來建立堡壘來提升防禦與操控軍隊來進行攻擊、防守、撤退等。當玩家的生命值小於等於0，則退出戰鬥。
+## 設計模式
+1. 中介者模式Mediator
+　　當玩家發動攻擊時，會透過戰鬥物件（中介者）來通知其他玩家有某玩家發動攻擊，並其他玩家扣除生命值。當某位玩家生命值小於等於0時，會透過中介者來通知其他玩家有玩家已退出戰鬥。
+2. 工廠模式Factory
+　　玩家可透過資源來建立建築物，而建築物包含普通建築物（Normal Building）、堅固建築物（Strong Building）。透過工廠模式來產生這兩種不同的建築物。
+3. 狀態模式 State
+玩家可對於軍隊進行操控攻擊狀態、防守狀態、撤退狀態，透過狀態模式來管理與維護這些狀態。
+4. 生成器模式Builder
+　　根據玩家選擇的種族不同會獲得不同資源數量，因此在資源物件使用生成器模式來生產出不同數量但同類型的資源給玩家。
+5. 樣板方法 Template Method
+　　玩家可選擇不同種族來進行戰鬥，在不同種族當中會有共同的方法，因此我們使用抽象類別來實現樣板方法來管理在不同種族當中共用的方法。
+類別圖
+    
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 功能列表
+軍隊Army
+1.	可進行攻擊
+2.	可進行防禦
+3.	可進行撤退
+4.	可進行狀態切換
+資源Resource
+1.	擁有木頭數量
+2.	擁有金錢數量
+3.	可更改木頭與金錢數量
+建築物Building
+1.	擁有防禦等級可抵擋玩家傷害
+2.	可建立普通建築物
+3.	可建立堅固建築物
+戰鬥 Fight
+1.	可通知其他玩家有玩家發動攻擊
+2.	可通知其他玩家有玩家退出戰鬥
+3.	擁有可生產建築物類型
+4.	擁有可獲得資源類型
+玩家 Player 
+1.	可選擇精靈、人族、矮人種族
+2.	擁有生命值，初始為5
+3.	擁有傷害值，精靈為5、人族為5、矮人為4
+4.	加入戰鬥後，可獲得資源（木頭、金錢）
+5.	加入戰鬥後，可使用資源建立建築物
