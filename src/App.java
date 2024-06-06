@@ -8,7 +8,7 @@ import resource.ResourceBuilder;
 public class App {
     public static void main(String[] args)  {
         System.out.println("Hello, Fight!");
-
+        
         Fight fight = new Fight(new BuildingFactory(), new ResourceBuilder());
 
         Player p1 = new HumanPlayer();
@@ -23,4 +23,5 @@ public class App {
         System.out.println("p2 round:");
         p2.attack();
     }
+
 }

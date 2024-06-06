@@ -1,6 +1,7 @@
 package test.army;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assume.assumeTrue;
 
 import org.junit.Test;
@@ -43,6 +44,7 @@ public class ArmyTest {
         sut.changeState(m2);
      
         assertEquals(sut.state, m2);
+        assertNotEquals(sut.state, m1);
     }
     
 }
