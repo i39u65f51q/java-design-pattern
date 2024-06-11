@@ -4,7 +4,7 @@ import army.Army;
 import fight.Fight;
 import player.Player;
 
-
+//模擬玩家物件
 public class MockPlayer extends Player{
     public boolean isCalledMethod;
 

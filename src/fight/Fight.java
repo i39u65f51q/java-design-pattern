@@ -13,7 +13,7 @@ import resource.ResourceBuilder;
 public class Fight implements Mediator {
     public BuildingFactory bFactory; //建築物工廠
     public ResourceBuilder rBuilder; //資源生成器
-    public List<Player> players;
+    public List<Player> players; //使用者們
     
     public Fight(BuildingFactory bFactory, ResourceBuilder rBuilder){
         this.bFactory = bFactory;
@@ -41,7 +41,7 @@ public class Fight implements Mediator {
         for(int i=0; i<this.players.size();i++){
             Player p = this.players.get(i);
             if(p == player){
-                this.players.remove(i);
+                this.players.remove(i); //移除使用者
                 break;
             }
         }

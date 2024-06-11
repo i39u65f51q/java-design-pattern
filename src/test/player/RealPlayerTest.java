@@ -17,6 +17,7 @@ import test.mock.MockFight;
 public class RealPlayerTest {
 
     @Test
+    //案例：玩家加入戰鬥後，取得軍隊、資源、建築物
     public void startFight(){
         Player sut = new RealPlayer();
         sut.startFight(new MockFight(new BuildingFactory(), new ResourceBuilder()), new Army(null));
@@ -28,6 +29,7 @@ public class RealPlayerTest {
     }
 
     @Test
+    //案例：玩家發動攻擊
     public void attack(){
         Player sut = new RealPlayer();
         MockArmy docArmy = new MockArmy(null);
@@ -44,6 +46,7 @@ public class RealPlayerTest {
     }
 
     @Test
+    //案例：玩家發動防禦
     public void defend(){
         Player sut = new RealPlayer();
         MockArmy docArmy = new MockArmy(null);
@@ -60,6 +63,7 @@ public class RealPlayerTest {
     }
 
     @Test
+    //案例：玩家被其他玩家攻擊後「陣亡」
     public void beAttackedAndBeDead(){
         Player sut = new RealPlayer();
         MockArmy docArmy = new MockArmy(null);
@@ -78,6 +82,7 @@ public class RealPlayerTest {
     }
 
     @Test
+    //案例：玩家被其他玩家攻擊後「存活」
     public void beAttackedAndBeAlive(){
         Player sut = new RealPlayer();
         MockArmy docArmy = new MockArmy(null);
@@ -96,6 +101,7 @@ public class RealPlayerTest {
     }
 
     @Test
+    //案例：玩家被其他玩家攻擊後「傷害值為0」
     public void beAttackedAndDamageIs0(){
         Player sut = new RealPlayer();
         MockArmy docArmy = new MockArmy(null);

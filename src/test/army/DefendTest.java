@@ -10,6 +10,7 @@ import test.mock.MockArmy;
 
 public class DefendTest {
     @Test
+    //案例：防禦狀態時，呼叫攻擊
     public void isDefendStateCallAttack(){
         Defend sut = new Defend();
         MockArmy doc = new MockArmy(new Defend());
@@ -19,6 +20,7 @@ public class DefendTest {
     }
 
     @Test
+    //案例：防禦狀態時，呼叫防禦
     public void isDefendStateCallDefend(){
         Defend sut = new Defend();
         MockArmy doc = new MockArmy(new Defend()); //防
@@ -28,6 +30,7 @@ public class DefendTest {
     }
 
     @Test
+    //案例：防禦狀態時，呼叫撤退
     public void isDefendStateCallRetreat(){
         Defend sut = new Defend();
         MockArmy doc = new MockArmy(new Defend()); //防

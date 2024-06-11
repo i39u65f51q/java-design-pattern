@@ -5,6 +5,7 @@ import fight.Fight;
 import player.Player;
 import resource.ResourceBuilder;
 
+//模擬戰鬥物件
 public class MockFight extends Fight{
     public boolean isCalledMethod;
 

@@ -8,6 +8,7 @@ import player.Player;
 
 public class HumanPlayerTest {
     @Test
+    //案例：取得傷害值
     public void getDamage(){
         Player sut = new HumanPlayer();
         assertEquals(sut.getDamage(), 5);

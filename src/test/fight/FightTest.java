@@ -11,6 +11,7 @@ import test.mock.MockPlayer;
 public class FightTest {
 
     @Test
+    //案例：新增玩家至戰鬥
     public void register(){
         Fight sut = new Fight(null, null);
         MockPlayer doc = new MockPlayer();
@@ -23,6 +24,7 @@ public class FightTest {
     }
 
     @Test
+    //案例：玩家發出攻擊戰鬥通知
     public void attackNotify(){
         Fight sut = new Fight(null, null);
         MockPlayer p1 = new MockPlayer();
@@ -38,6 +40,7 @@ public class FightTest {
     }
 
     @Test
+    //案例：玩家發出退出戰鬥通知
     public void quitNotify(){
         Fight sut = new Fight(null, null);
         MockPlayer p1 = new MockPlayer();

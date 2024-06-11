@@ -12,6 +12,7 @@ import test.mock.MockState;
 public class ArmyTest {
 
     @Test
+    //軍隊執行攻擊
     public void attack(){
         MockState doc = new MockState();
         Army sut = new Army(doc); 
@@ -20,6 +21,7 @@ public class ArmyTest {
         doc.isCalledMethod = false;
     }
     @Test
+    //軍隊執行防禦
     public void defend(){
         MockState doc = new MockState();
         Army sut = new Army(doc); 
@@ -28,6 +30,7 @@ public class ArmyTest {
         doc.isCalledMethod = false;
     }
     @Test
+    //軍隊執行撤退
     public void retreat(){
         MockState doc = new MockState();
         Army sut = new Army(doc); 
@@ -36,6 +39,7 @@ public class ArmyTest {
         doc.isCalledMethod = false;
     }
     @Test
+    //軍隊改變狀態 
     public void changeState(){
         MockState m1 = new MockState();
         MockState m2 = new MockState();

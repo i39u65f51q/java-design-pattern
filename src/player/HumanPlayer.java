@@ -1,9 +1,7 @@
 package player;
 
-/*人族玩家 
-    資源: 木頭200, 金錢100  
-    傷害: 5
-    建築物等級: 1
+/*人族玩家     
+    傷害: 5    
 */
 public class HumanPlayer extends Player{
 

@@ -9,6 +9,7 @@ import player.Player;
 
 public class ElfPlayerTest {
     @Test
+    //案例：取得傷害值
     public void getDamage(){
         Player sut = new ElfPlayer();
         assertEquals(sut.getDamage(), 5);

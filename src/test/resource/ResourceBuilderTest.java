@@ -10,6 +10,7 @@ import resource.ResourceBuilder;
 public class ResourceBuilderTest {
 
     @Test
+    //案例：新增木頭
     public void addWood(){
         ResourceBuilder r = new ResourceBuilder();
         r.addWood(100);
@@ -19,6 +20,7 @@ public class ResourceBuilderTest {
     }
 
     @Test
+    //案例：新增金錢
     public void addGold(){
         ResourceBuilder r = new ResourceBuilder();
         r.addGold(100);
@@ -28,6 +30,7 @@ public class ResourceBuilderTest {
     }
 
     @Test
+    //案例：重置資源數量
     public void reset(){
         ResourceBuilder r = new ResourceBuilder();
         r.reset();

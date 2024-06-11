@@ -3,6 +3,7 @@ package test.mock;
 import army.Army;
 import army.State;
 
+//模擬狀態物件
 public class MockState implements State{
     public boolean isCalledMethod;
 

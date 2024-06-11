@@ -13,6 +13,7 @@ public class BuildingFactoryTest {
     
 
     @Test
+    //案例：取得普通建築物成功
     public void getNormalBuildingSuccessfully(){
         BuildingFactory sut = new BuildingFactory();
         Resource doc = new Resource();
@@ -23,6 +24,7 @@ public class BuildingFactoryTest {
     }
 
     @Test
+    //案例：取得普通建築物失敗
     public void getNormalBuildingFailed(){
         BuildingFactory sut = new BuildingFactory();
         Resource doc = new Resource();
@@ -33,6 +35,7 @@ public class BuildingFactoryTest {
     }
 
     @Test
+    //案例：取得堅固建築物成功
     public void getStrongBuildingSuccessfully(){
         BuildingFactory sut = new BuildingFactory();
         Resource doc = new Resource();
@@ -44,6 +47,7 @@ public class BuildingFactoryTest {
     }
 
     @Test
+    //案例：取得堅固建築物失敗，木頭與金錢都不夠
     public void getStrongBuildingFailed(){
         BuildingFactory sut = new BuildingFactory();
         Resource doc = new Resource();
@@ -54,6 +58,7 @@ public class BuildingFactoryTest {
     }
 
     @Test
+    //案例：取得堅固建築物失敗，木頭不夠
     public void getStrongBuildingFailedFromWood(){
         BuildingFactory sut = new BuildingFactory();
         Resource doc = new Resource();
@@ -65,6 +70,7 @@ public class BuildingFactoryTest {
     }
 
     @Test
+    //案例：取得堅固建築物失敗，金錢不夠
     public void getStrongBuildingFailedFromGold(){
         BuildingFactory sut = new BuildingFactory();
         Resource doc = new Resource();
